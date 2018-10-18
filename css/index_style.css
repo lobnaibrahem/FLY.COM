@@ -372,6 +372,9 @@ h6{
     background-color:#EBECED;
     height: 507px;
 }
+.freeDrow{
+    display: none;
+}
 .pen-color{
     display: none;
 }

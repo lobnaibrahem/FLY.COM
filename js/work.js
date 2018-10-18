@@ -82,15 +82,23 @@ if (Modernizr.draganddrop) {
 })
 
     });
+ var colorPick = $('.input-color-value').on('change', function(){
+   console.log($(this).val());
+});
 
 $('#btnn').click(function(){
     $('#canvas-drow').toggle(100,function(){
-        var canvas;
-    canvas = window._canvas = new fabric.Canvas('c');
-    canvas.isDrawingMode= 1;
-    canvas.freeDrawingBrush.color = "black";
-    canvas.freeDrawingBrush.width = 10;
-    canvas.renderAll();
+        $('.freeDrow').show();
+   var canvas;
+   canvas = window._canvas = new fabric.Canvas('c');
+   canvas.isDrawingMode= 1;
+   canvas.freeDrawingBrush.color ="&quot;" + colorPick + "&quot;";
+   canvas.freeDrawingBrush.width = 10;
+   canvas.renderAll();
+        
     })
+    
+})
+$('#btn-e').click(function(){
     
 })
